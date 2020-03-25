@@ -50,9 +50,4 @@ time.sleep(2)
 part2 = get_info(browser.page_source)
 
 res = part1 + part2
-# 字符串清洗
-start = '学前教育教研的工作计划'
-end = '优秀教育随笔评比'
-res = res[res.index(start):res.index(end)]
-with open("zkl.txt", "w") as f:
-    f.write(res)
+### 接下来字符串清洗
