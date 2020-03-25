@@ -33,12 +33,12 @@ driver.find_element_by_id("LoginButton").click()
 time.sleep(3)
 
 #dd = driver.find_element_by_xpath(
-#        "//a[@title='XXXXXXXXXX']/../../following-sibling::dd[1]/div[1]/dl[3]/dd")
+#        "//a[@title='问卷名']/../../following-sibling::dd[1]/div[1]/dl[3]/dd")
 
 a1 = driver.find_element_by_xpath(
-        "//a[@title='XXXXXXXXXX']/../../following-sibling::dd[1]/div[1]/dl[3]/dd/a[@title='答卷统计分析']")
+        "//a[@title='问卷名']/../../following-sibling::dd[1]/div[1]/dl[3]/dd/a[@title='答卷统计分析']")
 a2 = driver.find_element_by_xpath(
-        "//a[@title='XXXXXXXXXX']/../../following-sibling::dd[1]/div[1]/dl[3]/dd/ul/li[2]/a[text()='查看下载答卷']")
+        "//a[@title='问卷名']/../../following-sibling::dd[1]/div[1]/dl[3]/dd/ul/li[2]/a[text()='查看下载答卷']")
 ActionChains(driver).move_to_element(a1).move_to_element(a2).click().perform()
 try:
     driver.find_element_by_xpath("//*[text()='此问卷暂时还没有答卷，请先回收答卷']")
