@@ -27,18 +27,18 @@ driver = webdriver.Chrome(chrome_options=options,
 driver.maximize_window() 
 driver.get(url)
 time.sleep(3)
-driver.find_element_by_id("UserName").send_keys("yaphetzkl")
-driver.find_element_by_id("Password").send_keys("9kk48qqj")
+driver.find_element_by_id("UserName").send_keys("此处键入账号")
+driver.find_element_by_id("Password").send_keys("此处键入密码")
 driver.find_element_by_id("LoginButton").click()
 time.sleep(3)
 
 #dd = driver.find_element_by_xpath(
-#        "//a[@title='丽景嘉园3月2日居民体温调查（乾苑G栋）']/../../following-sibling::dd[1]/div[1]/dl[3]/dd")
+#        "//a[@title='XXXXXXXXXX']/../../following-sibling::dd[1]/div[1]/dl[3]/dd")
 
 a1 = driver.find_element_by_xpath(
-        "//a[@title='丽景嘉园3月3日居民体温调查（乾苑G栋）']/../../following-sibling::dd[1]/div[1]/dl[3]/dd/a[@title='答卷统计分析']")
+        "//a[@title='XXXXXXXXXX']/../../following-sibling::dd[1]/div[1]/dl[3]/dd/a[@title='答卷统计分析']")
 a2 = driver.find_element_by_xpath(
-        "//a[@title='丽景嘉园3月3日居民体温调查（乾苑G栋）']/../../following-sibling::dd[1]/div[1]/dl[3]/dd/ul/li[2]/a[text()='查看下载答卷']")
+        "//a[@title='XXXXXXXXXX']/../../following-sibling::dd[1]/div[1]/dl[3]/dd/ul/li[2]/a[text()='查看下载答卷']")
 ActionChains(driver).move_to_element(a1).move_to_element(a2).click().perform()
 try:
     driver.find_element_by_xpath("//*[text()='此问卷暂时还没有答卷，请先回收答卷']")
