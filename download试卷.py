@@ -49,3 +49,5 @@ pdf.add_page()
 for path in glob.glob("*.png"):
     pdf.image(path, x=0,y=0, w=4000,h=3000)
 pdf.output("ttt.pdf")
+
+# 回到主页检查，刷新页面，在Network-Img中可直接分析出资源url：http://www.smartpage.cn/bookcase/hscjzx/xyingyu/files/mobile/第几页.jpg?200208153740
